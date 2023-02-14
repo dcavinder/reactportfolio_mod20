@@ -50,10 +50,10 @@ function Portfolio() {
         {portfolioApps.map(portfolioApp =>
             <Grid item>
                 <Card 
-                // title={portfolioApps.title} 
-                // github={portfolioApps.github} 
-                // deployed={portfolioApps.deployed} 
-                // image={portfolioApps.image}
+                title={portfolioApp.title} 
+                github={portfolioApp.github} 
+                deployed={portfolioApp.deployed} 
+                image={portfolioApp.image}
                 ></Card>
             </Grid>
         )}
