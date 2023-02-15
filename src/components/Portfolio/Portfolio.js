@@ -8,7 +8,7 @@ function Portfolio() {
             title: 'Code Quiz',
             github: 'https://github.com/dcavinder/code_quiz',
             deployed: 'https://dcavinder.github.io/code_quiz/',
-            image: '../../assets/images/code-quiz.png',
+            image: 'https://user-images.githubusercontent.com/105369240/199596487-30327f5b-dd2c-42b5-a8ad-21b9c17557b3.webm',
         },
         { 
             title: 'Code Quiz',

@@ -7,8 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
-
-const CardView = ({title,github,deployed,image}) => {
+const portfolioCard = ({ title, github, deployed, image}) => {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -18,23 +17,23 @@ const CardView = ({title,github,deployed,image}) => {
       <CardMedia
         component="img"
         height="194"
-        image= {image}
+        image={image}
         alt="Project Image"
       />
       <CardActions disableSpacing>
         <IconButton aria-label="GitHub">
-            <div href={github} target="_blank" >
+            <a href={github} >
             <GitHubIcon/>
-            </div>
+            </a>
         </IconButton>
-        <IconButton aria-label="share">
-            <div href={deployed} target="_blank">
+        <IconButton aria-label="Deployed Application">
+            <a href={deployed}>
             <LaunchIcon />
-            </div>
+            </a>
         </IconButton>
       </CardActions>
     </Card>
   );
 }
 
-export default CardView
+export default portfolioCard
