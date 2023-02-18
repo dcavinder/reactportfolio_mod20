@@ -1,6 +1,18 @@
-import React from 'react'
+import React from 'react';
 import Grid from '@mui/material/Grid';
-import Card from '../../components/Card'
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardActions from '@mui/material/CardActions';
+import IconButton from '@mui/material/IconButton';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
+import codequiz from '../../assets/images/codequiz.png';
+import uniquepasswordgen from '../../assets/images/uniquepasswordgen.png';
+import htmlcoderefactor from '../../assets/images/htmlcoderefactor.png';
+import teamprofilegenerator from '../../assets/images/teamprofilegenerator.png';
+import workdayscheduler from '../../assets/images/workdayscheduler.png';
+import parksearch from '../../assets/images/parksearch.png';
 
 function Portfolio() {
     let portfolioApps = [
@@ -8,53 +20,70 @@ function Portfolio() {
             title: 'Code Quiz',
             github: 'https://github.com/dcavinder/code_quiz',
             deployed: 'https://dcavinder.github.io/code_quiz/',
-            image: 'https://user-images.githubusercontent.com/105369240/199596487-30327f5b-dd2c-42b5-a8ad-21b9c17557b3.webm',
+            image: codequiz,
         },
         { 
-            title: 'Code Quiz',
-            github: 'https://github.com/dcavinder/code_quiz',
-            deployed: 'https://dcavinder.github.io/code_quiz/',
-            image: '../../assets/images/code-quiz.png',
+            title: 'Unique Password Generator',
+            github: 'https://github.com/dcavinder/unique_password_generator',
+            deployed: 'https://dcavinder.github.io/unique_password_generator/',
+            image: uniquepasswordgen,
         },
         { 
-            title: 'Code Quiz',
-            github: 'https://github.com/dcavinder/code_quiz',
-            deployed: 'https://dcavinder.github.io/code_quiz/',
-            image: '../../assets/images/code-quiz.png',
+            title: 'Html Code Refactor',
+            github: 'https://github.com/dcavinder/html_code_refactor',
+            deployed: 'https://dcavinder.github.io/html_code_refactor/',
+            image: htmlcoderefactor,
         },
         { 
-            title: 'Code Quiz',
-            github: 'https://github.com/dcavinder/code_quiz',
-            deployed: 'https://dcavinder.github.io/code_quiz/',
-            image: '../../assets/images/code-quiz.png',
+            title: 'Team Profile Generator',
+            github: 'https://github.com/dcavinder/team_profile_generator_mod10',
+            deployed: 'https://drive.google.com/file/d/1SYJGKYI1Z87JDhjkV5FJrgROPaaM7v4p/view',
+            image: teamprofilegenerator,
         },
         { 
-            title: 'Code Quiz',
-            github: 'https://github.com/dcavinder/code_quiz',
-            deployed: 'https://dcavinder.github.io/code_quiz/',
-            image: '../../assets/images/code-quiz.png',
+            title: 'Work Day Scheduler',
+            github: 'https://github.com/dcavinder/work_day_scheduler',
+            deployed: 'https://dcavinder.github.io/work_day_scheduler/',
+            image: workdayscheduler,
         },
         { 
-            title: 'Code Quiz',
-            github: 'https://github.com/dcavinder/code_quiz',
-            deployed: 'https://dcavinder.github.io/code_quiz/',
-            image: '../../assets/images/code-quiz.png',
+            title: 'National Park Search',
+            github: 'https://github.com/dcavinder/park_search',
+            deployed: 'https://dcavinder.github.io/park_search/',
+            image: parksearch,
         },
     ]
   return (
     <div>
-      <Grid container justifyContent="center">
-        <h2>My Portfolio</h2>
+      <Grid container style={{ background: '#112e0c' }} justifyContent="center">
+        <h2 style={{ color: '#ffffff' }}>My Portfolio</h2>
       </Grid>
       <Grid container spacing={3} padding={2} justifyContent="Center">
         {portfolioApps.map(portfolioApp =>
             <Grid item>
-                <Card 
-                title={portfolioApp.title} 
-                github={portfolioApp.github} 
-                deployed={portfolioApp.deployed} 
-                image={portfolioApp.image}
-                ></Card>
+            <Card style={{ background: '#879984' }} sx={{ maxWidth: 345 }}>
+                <CardHeader
+                    title={portfolioApp.title}
+                />
+                <CardMedia
+                    component="img"
+                    height="194"
+                    image={portfolioApp.image}
+                    alt="Project Image"
+                />
+                <CardActions disableSpacing>
+                <IconButton aria-label="GitHub">
+                        <a href={portfolioApp.github} >
+                        <GitHubIcon/>
+                        </a>
+                    </IconButton>
+                    <IconButton aria-label="Deployed Application">
+                        <a href={portfolioApp.deployed}>
+                        <LaunchIcon />
+                        </a>
+                    </IconButton>
+                </CardActions>
+                </Card>
             </Grid>
         )}
       </Grid>

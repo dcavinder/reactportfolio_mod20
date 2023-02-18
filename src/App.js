@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
-    <CssBaseline />
+    <CssBaseline enableColorScheme/>
     <Nav />
     <AboutMe />
     <Portfolio />

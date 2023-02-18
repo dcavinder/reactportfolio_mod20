@@ -8,8 +8,8 @@ import { TextField } from '@mui/material';
 const Contact = () => {
   return (
     <>
-        <Grid container justifyContent="center">
-            <h2>Contact Me</h2>
+        <Grid container style={{ background: '#112e0c' }} justifyContent="center">
+            <h2 style={{ color: '#ffffff' }}>Contact Me</h2>
         </Grid>
         <Grid container JustifyContent='center' padding={4}>
             <FormControl fullWidth>
