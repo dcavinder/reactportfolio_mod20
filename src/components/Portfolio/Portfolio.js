@@ -61,7 +61,7 @@ function Portfolio() {
       <Grid container spacing={3} padding={2} justifyContent="Center">
         {portfolioApps.map(portfolioApp =>
             <Grid item>
-            <Card style={{ background: '#879984' }} sx={{ maxWidth: 345 }}>
+            <Card style={{ background: '#658354' }} sx={{ maxWidth: 345 }}>
                 <CardHeader
                     title={portfolioApp.title}
                 />
@@ -74,12 +74,12 @@ function Portfolio() {
                 <CardActions disableSpacing>
                 <IconButton aria-label="GitHub">
                         <a href={portfolioApp.github} >
-                        <GitHubIcon/>
+                        <GitHubIcon style={{ color: '#ffffff' }}/>
                         </a>
                     </IconButton>
                     <IconButton aria-label="Deployed Application">
                         <a href={portfolioApp.deployed}>
-                        <LaunchIcon />
+                        <LaunchIcon style={{ color: '#ffffff' }}/>
                         </a>
                     </IconButton>
                 </CardActions>

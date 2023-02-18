@@ -10,12 +10,12 @@ function Footer() {
      <Grid container spacing={3} padding={2} justifyContent="Center">
      <IconButton aria-label="GitHub">
             <a href='https://github.com/dcavinder'>
-            <GitHubIcon/>
+            <GitHubIcon style={{ color: '#112e0c' }} />
             </a>
         </IconButton>
         <IconButton aria-label="share">
             <a href='https://www.linkedin.com/in/danielle-cavinder-4a5862179/'>
-            <LinkedInIcon />
+            <LinkedInIcon style={{ color: '#112e0c' }} />
             </a>
         </IconButton>
      </Grid>

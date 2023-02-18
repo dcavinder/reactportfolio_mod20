@@ -7,6 +7,9 @@ import { Typography } from '@mui/material';
 const aboutMe = () => {
   return (
     <div >
+        <Grid container style={{ background: '#112e0c' }} justifyContent="center">
+            <h2 style={{ color: '#ffffff' }}>About Me</h2>
+        </Grid>
         <Grid justifyContent='left' container padding={2} spacing={2} >
             <Grid item md={2}></Grid>
             <Grid item xs={12} md={3} >
@@ -16,7 +19,7 @@ const aboutMe = () => {
             <Grid item xs={12} md={4} >
                 <Typography>
                     Danielle is a motivated full stack software developer. 
-                    She granduated in 2019 from the Pamella Roland Devos 
+                    She graduated in 2019 from the Pamella Roland Devos 
                     School of Fashion of Kendall College of Art and Design; 
                     earning a Bachelor of Fine Art specializing in Fashion Studies. 
                     Danielle changed career paths and in 2023 granduated from the 

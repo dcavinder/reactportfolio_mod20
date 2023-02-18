@@ -8,9 +8,9 @@ function Resume() {
     const dlresume= () => {
         fetch('d_cavinder_resume.pdf').then(response => {
             response.blob().then(blob => {
-                const fileURL = window.URL.createObjectURL(blob);
+                const resumeURL = window.URL.createObjectURL(blob);
                 let alink = document.createElement('a');
-                alink.href = fileURL;
+                alink.href = resumeURL;
                 alink.download = 'd_cavinder_resume.pdf';
                 alink.click();
             })
@@ -21,15 +21,15 @@ function Resume() {
         <Grid container style={{ background: '#112e0c' }} justifyContent="center">
             <h2 style={{ color: '#ffffff' }}>My Resume</h2>
         </Grid>
-        <Grid container xs={12} md={8} xl={6} justifyContent="center">
-        <Grid item padding={10}>
+        <Grid container justifyContent="center">
+        <Grid item padding="10%">
         <img src={dcavresume} alt="Resume" style={{ height: "98%", width: "70%" }}/>
         </Grid>
-        </Grid>
-        <Grid justifyContent="Center">
-            <IconButton aria-label="share">
+        <Grid item>
+            <IconButton aria-label="download">
                 <DownloadIcon onClick={dlresume}/>
             </IconButton>
+        </Grid>
         </Grid>
     </div>
   )
