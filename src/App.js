@@ -1,20 +1,21 @@
-import Nav from './components/Nav';
+import React from "react";
 import CssBaseline from '@mui/material/CssBaseline';
-import AboutMe from './components/About/AboutMe';
+import Nav from './components/Nav';
+import About from './components/About';
 import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
 import Contact from './components/Contact';
-import Resume from './components/Resume'
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
     <CssBaseline enableColorScheme/>
-    <Nav />
-    <AboutMe />
-    <Portfolio />
-    <Resume />
-    <Contact />
+    <Nav/>
+    <About/>
+    <Portfolio/>
+    <Resume/>
+    <Contact/>
     <Footer />
     </>
 

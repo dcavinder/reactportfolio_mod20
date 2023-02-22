@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
@@ -5,6 +6,8 @@ import InputLabel from '@mui/material/InputLabel';
 import Grid from '@mui/material/Grid';
 import { TextField } from '@mui/material';
 import { emailVerify } from '../../email_verification/verify_email.js';
+import { IconButton } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
 
 const Contact = () => {
     const [ guestName, setGuestName ] = useState('');
@@ -44,26 +47,26 @@ const Contact = () => {
         <Grid container JustifyContent='center' padding={4}>
             <FormControl fullWidth>
                 <InputLabel htmlFor="guestName">Name</InputLabel>
-                <Input id="guestName" value={guestName}/>
+                <Input id="guestName" value={setGuestName}/>
             </FormControl>
         </Grid>
         <Grid container JustifyContent='center' padding={4}>
             <FormControl fullWidth>
                 <InputLabel htmlFor="emailInput">Email address</InputLabel>
-                <Input id="emailInput" value={email}/>
+                <Input id="emailInput" value={setEmail}/>
             </FormControl>
         </Grid>
         <Grid container JustifyContent='center' padding={4}>
             <TextField
-            value={message}
+            value={setMessage}
             label="messageInput"
             multiline
             fullWidth
             rows={4}
             />
-        </Grid>
-        <Grid>
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+            <IconButton aria-label="share">
+                <SendIcon style={{ color: '#112e0c' }} onClick={handleFormSubmit}/>
+            </IconButton>
         </Grid>
     </>    
   )
