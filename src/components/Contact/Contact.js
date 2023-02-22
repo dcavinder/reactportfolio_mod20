@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { useState } from "react";
 import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import Grid from '@mui/material/Grid';
 import { TextField } from '@mui/material';
+import { emailVerify } from '../../email_verification/verify_email.js';
 
 const Contact = () => {
+    const [ guestName, setGuestName ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ message, setMessage ] = useState('');
+    const [ errorAlert, setErrorAlert ] = useState('');
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        if(!guestName) {
+            setErrorAlert('Please enter a valid name.');
+            return;
+        }
+
+        if(!emailVerify(email)) {
+            setErrorAlert('Please enter a valid email address.');
+            return;
+        }
+
+        if(!message) {
+            setErrorAlert('Please leave a message.')
+            return;
+        }
+        
+        setGuestName('')
+        setEmail('')
+        setMessage('')
+        setErrorAlert('')
+    }
+
   return (
     <>
         <Grid container style={{ background: '#112e0c' }} justifyContent="center">
@@ -13,23 +43,27 @@ const Contact = () => {
         </Grid>
         <Grid container JustifyContent='center' padding={4}>
             <FormControl fullWidth>
-                <InputLabel htmlFor="guest-name-input">Name</InputLabel>
-                <Input id="guest-name-input"/>
+                <InputLabel htmlFor="guestName">Name</InputLabel>
+                <Input id="guestName" value={guestName}/>
             </FormControl>
         </Grid>
         <Grid container JustifyContent='center' padding={4}>
             <FormControl fullWidth>
-                <InputLabel htmlFor="email-input">Email address</InputLabel>
-                <Input id="email-input"/>
+                <InputLabel htmlFor="emailInput">Email address</InputLabel>
+                <Input id="emailInput" value={email}/>
             </FormControl>
         </Grid>
         <Grid container JustifyContent='center' padding={4}>
             <TextField
-            label="Message"
+            value={message}
+            label="messageInput"
             multiline
             fullWidth
             rows={4}
             />
+        </Grid>
+        <Grid>
+        <button type="button" onClick={handleFormSubmit}>Submit</button>
         </Grid>
     </>    
   )
