@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/reactportfolio_mod20/static/js/main.e65306b8.js",
+    "static/media/parksearch.png": "/reactportfolio_mod20/static/media/parksearch.bc225959febae4bde65d.png",
+    "static/media/dcavresume.png": "/reactportfolio_mod20/static/media/dcavresume.0c2c6871ba782678d9ff.png",
+    "static/media/htmlcoderefactor.png": "/reactportfolio_mod20/static/media/htmlcoderefactor.80328a6ee44dcd2451ce.png",
+    "static/media/codequiz.png": "/reactportfolio_mod20/static/media/codequiz.47e4cdaa975da4db3909.png",
+    "static/media/workdayscheduler.png": "/reactportfolio_mod20/static/media/workdayscheduler.5edbc8f42132853895a8.png",
+    "static/media/teamprofilegenerator.png": "/reactportfolio_mod20/static/media/teamprofilegenerator.d977a861eda0a1862500.png",
+    "static/media/dcavinder.jpeg": "/reactportfolio_mod20/static/media/dcavinder.1747dbcfcdbc3026622f.jpeg",
+    "static/media/uniquepasswordgen.png": "/reactportfolio_mod20/static/media/uniquepasswordgen.36c07a6365262bc8c397.png",
+    "index.html": "/reactportfolio_mod20/index.html",
+    "main.e65306b8.js.map": "/reactportfolio_mod20/static/js/main.e65306b8.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e65306b8.js"
+  ]
+}
